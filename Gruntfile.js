@@ -33,17 +33,18 @@ module.exports = function(grunt) {
         }
       }
     },
-    haml: {                              // Task
-      dist: {                            // Target
-        files: {                         // Dictionary of files
+    // hamlの設定
+    haml: { // Task
+      dist: { // Target
+        files: { // Dictionary of files
           'index.html': 'index.haml'
         }
       }
     },
-    // Configuration to be run (and then tested)
+    // 監視内容
     regarde: {
       fred: {
-        files: ['scss/*.scss','*.haml'],　// 監視対象
+        files: ['scss/*.scss','*.haml'], // 監視対象
         tasks: ['compass','haml','livereload'] //監視対象が変更された際に実行する内容
       }
     },
