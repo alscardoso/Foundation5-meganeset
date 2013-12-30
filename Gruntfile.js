@@ -33,11 +33,18 @@ module.exports = function(grunt) {
         }
       }
     },
+    haml: {                              // Task
+      dist: {                            // Target
+        files: {                         // Dictionary of files
+          'index.html': 'index.haml'
+        }
+      }
+    },
     // Configuration to be run (and then tested)
     regarde: {
       fred: {
-        files: ['scss/*.scss','*.html'],　// 監視対象
-        tasks: ['compass','livereload'] //監視対象が変更された際に実行する内容
+        files: ['scss/*.scss','*.haml'],　// 監視対象
+        tasks: ['compass','haml','livereload'] //監視対象が変更された際に実行する内容
       }
     },
     
@@ -48,6 +55,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-livereload');
   grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-haml');
 
   // Default task
   grunt.registerTask('default', ['livereload-start', 'connect', 'regarde']);
