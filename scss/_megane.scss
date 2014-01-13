@@ -7,6 +7,7 @@ $body-font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メ
 //base
 h1, h2, h3, h4, h5, h6 {
 	color:$body-font-color;
+	font-family:$body-font-family;
 }
 .full{
 	width: 100%; 
@@ -26,7 +27,7 @@ img.right{
 
 //layout
 .cover{
-	background-color: #a099fe;
+	background-color: #fedeef;
 	padding: 40px 0;
 	width: 100%;
 	overflow: hidden;
@@ -51,7 +52,7 @@ img.right{
 
 .main-img{
 	padding: 200px 0;
-	background-color: #ff77e4;
+	background-color: #fff6cf;
 }
 .title{
 	text-align: center;

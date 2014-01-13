@@ -1,3 +1,4 @@
+doctype 5
 html class="no-js" lang="ja"
 	head
 		meta charset="utf-8"
@@ -6,32 +7,12 @@ html class="no-js" lang="ja"
 		link rel="stylesheet" href="stylesheets/app.css"
 		script src="bower_components/modernizr/modernizr.js"
 	body
-		.contain-to-grid.fixed
-			nav.top-bar data-topbar=""
-				ul.title-area
-					li.name
-						h1
-							a href="#" Meganee
-					li.toggle-topbar.menu-icon
-						a href=""
-							span Menu
-				section.top-bar-section
-					ul.right
-						li
-							a href="#"
-								Right Nav Button Active
-						li.has-dropdown
-							a href="#"
-								Right Button with Dropdown
-							ul.dropdown
-								li
-									a href="#"
-										First link in dropdown
+		== Slim::Template.new('template/header.slim').render()
 		.main-img.mb
 			.row
 				.large-12.columns
-					h1 FFFFirst Message
-					h3 you know me me me me
+					h1 First Message
+					h3 you know me
 		.row.mb
 			h2.title Keep it Real
 			.large-4.columns
@@ -51,52 +32,46 @@ html class="no-js" lang="ja"
 			.large-6.columns
 				h1 Third Message
 				h3 you know me
-		.cover.nmb
+		.nmb
 			.row
 				.large-3.columns
 					.panel.np
 						img src="http://placehold.it/250x100/7fcc6d/fff&text=Logo" alt="" 
 						h4 aaaaaaa
-						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, eum, similique, facere officiis odio maiores eligendi
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, eum, similique, facere officiis odio
 				.large-3.columns
 					.panel.np
 						img src="http://placehold.it/250x100/62cc92/fff&text=Logo" alt=""
 						h4 aaaaaaa
-						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, eum, similique, facere officiis odio maiores eligendi
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, eum, similique, facere officiis odio
 				.large-3.columns
 					.panel.np
 						img src="http://placehold.it/250x100/58c0cc/fff&text=Logo" alt=""
 						h4 aaaaaaa
-						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, eum, similique, facere officiis odio maiores eligendi
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, eum, similique, facere officiis odio
 				.large-3.columns
 					.panel.np
 						img src="http://placehold.it/250x100/5391cc/fff&text=Logo" alt=""
 						h4 aaaaaaa
-						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, eum, similique, facere officiis odio maiores eligendi
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, eum, similique, facere officiis odio
 				.large-3.columns
 					.panel.np
 						img src="http://placehold.it/250x100/817acc/fff&text=Logo" alt=""
 						h4 aaaaaaa
-						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, eum, similique, facere officiis odio maiores eligendi
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, eum, similique, facere officiis odio
 				.large-3.columns
 					.panel.np
 						img src="http://placehold.it/250x100/cb8fcc/fff&text=Logo" alt=""
 						h4 aaaaaaa
-						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, eum, similique, facere officiis odio maiores eligendi
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, eum, similique, facere officiis odio
 				.large-3.columns
 					.panel.np
 						img src="http://placehold.it/250x100/cc8073/fff&text=Logo" alt=""
 						h4 aaaaaaa
-						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, eum, similique, facere officiis odio maiores eligendi
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, eum, similique, facere officiis odio
 				.large-3.columns
 					.panel.np
 						img src="http://placehold.it/250x100/cca262/fff&text=Logo" alt=""
 						h4 aaaaaaa
-						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, eum, similique, facere officiis odio maiores eligendi
-		.site-footer
-			.row
-				.large-12.columns.text-center
-					p copyright
-		script src="bower_components/jquery/jquery.js"
-		script src="bower_components/foundation/js/foundation.min.js"
-		script src="js/app.js"
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, eum, similique, facere officiis odio
+		== Slim::Template.new('template/footer.slim').render()
