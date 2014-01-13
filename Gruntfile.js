@@ -37,15 +37,27 @@ module.exports = function(grunt) {
     haml: { // Task
       dist: { // Target
         files: { // Dictionary of files
-          'index.html': 'index.haml'
+          'index-haml.html': 'index-haml.haml'
         }
+      }
+    },
+    // slimの設定
+    slim: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: './',
+          src: ['{,*/}*.slim'],
+          dest: './',
+          ext: '.html'
+        }]
       }
     },
     // 監視内容
     regarde: {
       fred: {
-        files: ['scss/*.scss','*.haml'], // 監視対象
-        tasks: ['compass','haml','livereload'] //監視対象が変更された際に実行する内容
+        files: ['scss/*.scss','*.haml','*.slim'], // 監視対象
+        tasks: ['compass','haml','slim','livereload'] //監視対象が変更された際に実行する内容
       }
     },
     
@@ -57,6 +69,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-livereload');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-haml');
+  grunt.loadNpmTasks('grunt-slim');
 
   // Default task
   grunt.registerTask('default', ['livereload-start', 'connect', 'regarde']);
