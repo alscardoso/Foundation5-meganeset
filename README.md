@@ -8,6 +8,7 @@ you need
 - NodeJS
 - compass
 - haml
+- slim
 - grunt
 
 ## how to work
@@ -18,5 +19,5 @@ you need
 ## liveReload
 - save .haml or .scss
 - http://localhost:9001/ is Reload
-- compile scss to css and haml to html
+- compile scss to css and haml,slim to html 
 
