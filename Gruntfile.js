@@ -33,6 +33,7 @@ module.exports = function(grunt) {
         }
       }
     },
+    // slimの設定
     slim: {
       dist: {
         files: [{
