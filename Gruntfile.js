@@ -33,7 +33,6 @@ module.exports = function(grunt) {
         }
       }
     },
-    // slimの設定
     slim: {
       dist: {
         files: [{
@@ -43,6 +42,12 @@ module.exports = function(grunt) {
           dest: './',
           ext: '.html'
         }]
+      }
+    },
+    // 自動的にブラウザを開く設定
+      open : {
+      dev : {
+        path: 'http://localhost:9001/'
       }
     },
     // 監視内容
@@ -60,7 +65,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-livereload');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-slim');
+  grunt.loadNpmTasks('grunt-open'); 
 
   // Default task
-  grunt.registerTask('default', ['livereload-start', 'connect', 'regarde']);
+  grunt.registerTask('default', ['livereload-start','connect','open:dev','regarde']);
 };
